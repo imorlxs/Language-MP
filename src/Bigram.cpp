@@ -12,12 +12,11 @@
 
 #include "Bigram.h"
 
-Bigram::Bigram(const std::string& text="__") {
+//¿Hay que quitar el valor por defecto cuando declaras la función?
+Bigram::Bigram(const std::string& text) {
     if(text.size()==2){
         _text = text;
-    } else{
-        _text = "__";
-    }
+    } 
 }
 
 Bigram::Bigram(char first, char second) {
@@ -34,7 +33,22 @@ std::string Bigram::toString() const{
 
 const char& Bigram::at(int index) const{
     if (index<0 || index > 2){
-        throw std::out_of_range(string("const char& Bigram::at(int index) const: ")
-                + "invalid position " + toString(index));
+        throw std::out_of_range(std::string("const char& Bigram::at(int index) const: ")
+                + "invalid position " + std::to_string(index));
     }
+    else{
+        return _text[index];
+    }
+}
+char& Bigram::at(int index) const{
+    char asd = 'a';
+    return asd;
+}
+
+bool isValidCharacter(char character, const std::string& validCharacters){
+    return false;
+}
+
+void toUpper(Bigram &bigram){
+    
 }
