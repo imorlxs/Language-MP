@@ -24,6 +24,9 @@
  * Running example:
  * > language0 < data/SimpleText.txt
  */
+#include<iostream>
+
+using namespace std;
 int main(int argc, char* argv[]) {
     // This string contains the list of characters that are considered as
     // valid within a word. The rest of characters are considered as
