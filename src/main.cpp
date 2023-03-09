@@ -25,6 +25,7 @@
  * > language0 < data/SimpleText.txt
  */
 #include<iostream>
+#include "Bigram.h"
 
 using namespace std;
 int main(int argc, char* argv[]) {
@@ -32,7 +33,7 @@ int main(int argc, char* argv[]) {
     // valid within a word. The rest of characters are considered as
     // separators
     const string validCharacters = "abcdefghijklmnopqrstuvwxyz\xE0\xE1\xE2\xE3\xE4\xE5\xE6\xE7\xE8\xE9\xEA\xEB\xEC\xED\xEE\xEF\xF0\xF1\xF2\xF3\xF4\xF5\xF6\xF8\xF9\xFA\xFB\xFC\xFD\xFE\xFF";
-
+    
     // Read a text
     // Read a bigram (tex with two characters)
     
