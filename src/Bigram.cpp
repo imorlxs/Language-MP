@@ -40,9 +40,14 @@ const char& Bigram::at(int index) const{
         return _text[index];
     }
 }
-char& Bigram::at(int index) const{
-    char asd = 'a';
-    return asd;
+char& Bigram::at(int index){
+    if (index<0 || index > 2){
+        throw std::out_of_range(std::string("const char& Bigram::at(int index) const: ")
+                + "invalid position " + std::to_string(index));
+    }
+    else{
+        return _text[index];
+    }
 }
 
 bool isValidCharacter(char character, const std::string& validCharacters){
