@@ -24,25 +24,76 @@
  * Running example:
  * > language0 < data/SimpleText.txt
  */
-#include<iostream>
-#include "Bigram.h"
 
+#include "Bigram.h"
 using namespace std;
+
+void toLower(string &text) {
+    int asciidiff = 'a' - 'A';
+    int isodiff = 'à' - 'À';
+    for (int i = 0; i <= text.length(); i++) {
+        if (text[i] >= 'A' && text[i] <= 'Z') {
+            text[i] = text[i] + asciidiff;
+        } else if (text[i] >= 'À' && text[i] <= 'Ü') {
+            text[i] = text[i] + isodiff;
+        }
+    }
+}
+
 int main(int argc, char* argv[]) {
     // This string contains the list of characters that are considered as
     // valid within a word. The rest of characters are considered as
     // separators
     const string validCharacters = "abcdefghijklmnopqrstuvwxyz\xE0\xE1\xE2\xE3\xE4\xE5\xE6\xE7\xE8\xE9\xEA\xEB\xEC\xED\xEE\xEF\xF0\xF1\xF2\xF3\xF4\xF5\xF6\xF8\xF9\xFA\xFB\xFC\xFD\xFE\xFF";
-    
+
+    string big_components;
+    string text;
+    cout << "Enter text and the bigram: " << endl;
     // Read a text
+    cin >> text;
+    toLower(text);
+
     // Read a bigram (tex with two characters)
-    
+    cin >> big_components;
+
+    Bigram * bigrams[text.length() - 1];
+    Bigram bigram(big_components);
+
     // Find the bigrams in text and put them in an array of Bigrams
-    
+    int counter = 0;
+    for (int i = 0; i < text.length() - 1; i++) {
+        if (isValidCharacter(text[i], validCharacters) && isValidCharacter(text[i + 1], validCharacters)) {
+            bigrams[counter] = new Bigram(text[i], text[i + 1]);
+            counter++;
+        }
+    }
     // Show the bigrams stored in the array
-    
+    cout << counter << endl;
+    for (int i = 0; i < counter; i++) {
+        cout << bigrams[i]->getText() << endl;
+    }
+    cout << endl;
+
     // Convert to uppercase the bigrams in the array that are equals to input bigram
-    
+    for (int i = 0; i < counter; i++) {
+        if (bigrams[i]->getText() == bigram.getText()) {
+            toUpper(*bigrams[i]);
+        }
+    }
     // Show again the bigrams stored in the array
+    cout << counter << endl;
+    for (int i = 0; i < counter; i++) {
+        cout << bigrams[i]->getText() << endl;
+    }
+
+
+
+
+
+
+
+
+
+
 }
 
