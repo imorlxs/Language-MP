@@ -11,9 +11,8 @@
  */
 #include <string>
 #include "Bigram.h" 
-//¿Hay que quitar el valor por defecto cuando declaras la función?
 Bigram::Bigram(const std::string& text) {
-    if(text.size()==2/* && isValidCharacter(text[0], validCharacters) && isValidCharacter(text[1], validCharacters)*/){
+    if(text.size()==2){
         _text = text;
     } else{
         _text = "__";
@@ -52,17 +51,21 @@ char& Bigram::at(int index){
 }
 
 bool isValidCharacter(char character, const std::string& validCharacters){
+        for (int i = 0; i < validCharacters.length(); i++){
+            if (validCharacters[i] == character)
+                return true;
+        }
         return false;
 }
 
 void toUpper(Bigram &bigram){
-    int diff = 'a' - 'A';
-    int diff2 = 'á' - 'Á';
+    int asciidiff = 'a' - 'A';
+    int isodiff = 'á' - 'Á';
     for (int i = 0; i <= 1; i++){
         if (bigram.at(i) >= 'a' && bigram.at(i)<= 'z'){
-            bigram.at(i) = bigram.at(i) - diff;
+            bigram.at(i) = bigram.at(i) - asciidiff;
         } else if (bigram.at(i) >= 'á' && bigram.at(i)<= 'ü'){
-            bigram.at(i) = bigram.at(i) - diff2;
+            bigram.at(i) = bigram.at(i) - isodiff;
     } 
     }
     
