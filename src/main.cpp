@@ -48,8 +48,9 @@ int main(int argc, char* argv[]) {
 
     string big_components;
     string text;
-    cout << "Enter text and the bigram: " << endl;
+    
     // Read a text
+    cout << "Enter text and the bigram: " << endl;
     cin >> text;
     toLower(text);
 
