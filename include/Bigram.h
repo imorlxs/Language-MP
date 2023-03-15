@@ -3,13 +3,11 @@
  * Curso 2022/2023
  */
 
-/** 
- * @file Bigram.h
- * @author Silvia Acid Carrillo <acid@decsai.ugr.es>
- * @author Andrés Cano Utrera <acu@decsai.ugr.es>
- * @author Luis Castillo Vidal <L.Castillo@decsai.ugr.es>
- * 
- * Created on 2 February 2023, 11:00
+/* 
+ * File:   main.cpp
+ * @author Isaac Morales Santana <imorsan@correo.ugr.es>
+ * @author Francisco Manuel Caceres Martin <javicaceres@correo.ugr.es>
+ *
  */
 
 #ifndef BIGRAM_H
