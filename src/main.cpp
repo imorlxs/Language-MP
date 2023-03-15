@@ -5,11 +5,9 @@
 
 /* 
  * File:   main.cpp
- * @author Silvia Acid Carrillo <acid@decsai.ugr.es>
- * @author Andrés Cano Utrera <acu@decsai.ugr.es>
- * @author Luis Castillo Vidal <L.Castillo@decsai.ugr.es>
+ * @author Isaac Morales Santana <imorsan@correo.ugr.es>
+ * @author Francisco Manuel Caceres Martin <javicaceres@correo.ugr.es>
  *
- * Created on 2 de febrero de 2023, 12:23
  */
 
 
