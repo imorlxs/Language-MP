@@ -61,11 +61,11 @@ bool isValidCharacter(char character, const std::string& validCharacters){
 
 void toUpper(Bigram &bigram){
     int asciidiff = 'a' - 'A';
-    int isodiff = 'á' - 'Á';
+    int isodiff = 'à' - 'À';
     for (int i = 0; i <= 1; i++){
         if (bigram.at(i) >= 'a' && bigram.at(i)<= 'z'){
             bigram.at(i) = bigram.at(i) - asciidiff;
-        } else if (bigram.at(i) >= 'á' && bigram.at(i)<= 'ü'){
+        } else if (bigram.at(i) >= 'à' && bigram.at(i)<= 'ü'){
             bigram.at(i) = bigram.at(i) - isodiff;
     } 
     }
