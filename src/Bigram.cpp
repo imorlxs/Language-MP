@@ -1,14 +1,15 @@
 /*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/cppFiles/class.cc to edit this template
+ * Metodología de la Programación: Language0
+ * Curso 2022/2023
  */
 
 /* 
- * File:   Bigram.cpp
- * Author: isaac
- * 
- * Created on 9 de marzo de 2023, 1:14
+ * File:   main.cpp
+ * @author Isaac Morales Santana <imorsan@correo.ugr.es>
+ * @author Francisco Manuel Caceres Martin <javicaceres@correo.ugr.es>
+ *
  */
+
 #include <string>
 #include "Bigram.h" 
 Bigram::Bigram(const std::string& text) {
