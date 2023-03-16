@@ -6,7 +6,7 @@
 /* 
  * File:   main.cpp
  * @author Isaac Morales Santana <imorsan@correo.ugr.es>
- * @author Francisco Manuel Caceres Martin <javicaceres@correo.ugr.es>
+ * @author Francisco Javier Caceres Martin <javicaceres@correo.ugr.es>
  *
  */
 
@@ -83,6 +83,7 @@ int main(int argc, char* argv[]) {
     cout << counter << endl;
     for (int i = 0; i < counter; i++) {
         cout << bigrams[i]->getText() << endl;
+        delete bigrams[i];
     }
 
 
