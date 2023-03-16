@@ -54,36 +54,38 @@ int main(int argc, char* argv[]) {
 
     // Read a bigram (tex with two characters)
     cin >> big_components;
-
-    Bigram * bigrams[text.length() - 1];
+    const int MAX = 1000;
+    int util_v;
+    Bigram bigrams[MAX];
     Bigram bigram(big_components);
 
     // Find the bigrams in text and put them in an array of Bigrams
     int counter = 0;
     for (int i = 0; i < text.length() - 1; i++) {
         if (isValidCharacter(text[i], validCharacters) && isValidCharacter(text[i + 1], validCharacters)) {
-            bigrams[counter] = new Bigram(text[i], text[i + 1]);
+            bigrams[counter].at(0) = text[i];
+            bigrams[counter].at(1) = text[i+1];
             counter++;
         }
     }
     // Show the bigrams stored in the array
     cout << counter << endl;
     for (int i = 0; i < counter; i++) {
-        cout << bigrams[i]->getText() << endl;
+        cout << bigrams[i].getText() << endl;
     }
     cout << endl;
 
     // Convert to uppercase the bigrams in the array that are equals to input bigram
     for (int i = 0; i < counter; i++) {
-        if (bigrams[i]->getText() == bigram.getText()) {
-            toUpper(*bigrams[i]);
+        if (bigrams[i].getText() == bigram.getText()) {
+            toUpper(bigrams[i]);
         }
     }
     // Show again the bigrams stored in the array
     cout << counter << endl;
     for (int i = 0; i < counter; i++) {
-        cout << bigrams[i]->getText() << endl;
-        delete bigrams[i];
+        cout << bigrams[i].getText() << endl;
+   
     }
 
 
