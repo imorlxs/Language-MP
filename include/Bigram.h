@@ -6,7 +6,7 @@
 /* 
  * File:   main.cpp
  * @author Isaac Morales Santana <imorsan@correo.ugr.es>
- * @author Francisco Manuel Caceres Martin <javicaceres@correo.ugr.es>
+ * @author Francisco Javier Caceres Martin <javicaceres@correo.ugr.es>
  *
  */
 
